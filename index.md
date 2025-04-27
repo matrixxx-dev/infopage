@@ -10,8 +10,8 @@ lang: de
 # "matrixxx" - ein D.I.Y Linux Live System
 **matrixxx** ist zunächst eine Sammlung von bash Skripten, mit deren Hilfe man
 sich sein eigenes Linux Live System erzeugen kann. (Zumindest erzeuge ich damit
-mein eigenes System, welche ich in diesem Zuge der Allgemeinheit zur Verfügung
-stellen möchte).
+mein eigenes System - und diese Möglichkeit möchte ich in diesem Zuge der
+Allgemeinheit zur Verfügung stellen).
 Hiermit lassen sich
 
 - ein für diese Zwecke angepasster moderner Kernel erzeugen
