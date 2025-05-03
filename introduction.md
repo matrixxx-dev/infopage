@@ -6,7 +6,7 @@ lang: de
 ...
 
 <!-- *********************************************************************** -->
-# Einführung
+# Systembeschreibung (eine Einführung)
 
 ![](svg/todo.svg){ width="100" alt="[matrixxx] TODO" }
 

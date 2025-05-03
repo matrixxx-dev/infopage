@@ -25,7 +25,7 @@ Sie unter:
 
 #### Anmerkungen zu externen Links
 Diese Webseite enthält eventuell Links zu externen Websites Dritter,
-auf deren Inhalte ich keinen Einfluss haben. Deshalb kann ich für diese
+auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese
 fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
 verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der
 Seiten verantwortlich.

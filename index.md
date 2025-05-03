@@ -22,8 +22,8 @@ Aus einem 'Build' Lauf entsteht daraus ein System, welches
 direkt von einem USB Flash Laufwerk produktiv genutzt werden kann, ohne dieses
 zuvor installiert haben zu müssen. Ein System also für die Hosentasche, dass
 auf verschiedenster x86-Hardware in gleicher gewohnter Art und Weise nutzbar und
-bedienbar ist (soweit diese USB Flash Laufwerke als Bootmedium zulässt).
+bedienbar ist (soweit diese Hardware USB Flash Laufwerke als Bootmedium zulässt).
 
-- [Motiv](motiv.html)
-- [Einführung](introduction.html)
+- [Systembeschreibung](introduction.html) (eine Einführung)
 - [Download](download.html)
+- [Blog](blog.html) (Stand der Dinge)
