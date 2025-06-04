@@ -1,29 +1,52 @@
-# matrixxx
+# matrixxx project
 - a D.I.Y live system based on shell scripts
 - primarily for use on a USB stick (or similar)
 - [home page](https://matrixxx.dev/)
 
 ## What does matrixxx stand for?
-1. an initramfs system for starting various unionfs-based systems
-   (busybox-based) with a specially adapted kernel
-2. a union mount file operating system based on Debian
+Scripts for generating:
+1. an initramfs system (busybox-based) for booting a unionfs-based linux
+   system with a custom kernel
+2. an union-mounted file system based on Debian
 
-### kernel
-- is started by ldlinux (part of extlinux/syslinux) and starts the initramfs
-  itself
-- contains "aufs" (advanced multi layered unification filesystem)
-- contains drivers to boot the USB stick (or similar)
+## used boot medium (structure)
+- Boot medium is a USB stick (or similar) or a hard disk
+- Extlinux/syslinux is used as bootloader
+  - Legacy boot and UEFI 
+- The customized kernel is started by the bootloader, which in turn starts
+  a customized initramfs. Controlled by the bootloader configurations file.
+- The customized initramfs mounts the read-only operating system images as
+  a “Union File System” and starts the OS init process. 
+ 
+### kernel build
+- generate a customized kernel
+  - contains "aufs" (advanced multi layered unification filesystem)
+  - contains drivers to boot the USB stick (or similar)
 
-### initramfs
-- the used busybox version is v1.37.0
-- the union mount file system used can be of type "aufs" or "OverlayFS"
-  and can be selected via kernel parameter (default:"aufs")
-- the read-only images (for union mount) of the operating system are of type
+### initramfs build
+- generate a customized initramfs
+   - contains a customized busybox which is based on version v1.37.0
+   - contains a init script which
+      - has an exit ("hook") as early as possible to easily try out adjustments
+      - allows various CHEATCODES via kernel parameter (bootloader)
+         - allows you to select the union mount file system
+            - "aufs" (default) or "OverlayFS"
+         - ...
+- *note:* the read-only images (for union mount) of the operating system are of type
   "squashfs" ("cloop" integration is planned)
-- the init script has an exit ("hook") as early as possible to easily try out
-  adjustments
 
-### system
-- debian based system
-  - used suites: stable testing unstable (testing='Trixie')
+### system build
+- generate a debian based system packed in several "squashfs" files
+  - used suites: stable testing unstable
   - used software categories: main contrib non-free-firmware
+
+### links:
+- home page of [busybox][]
+- home page of [kernel.org][kernel]
+- home page of [aufs][]
+- home page of [Syslinux Project][]
+
+[busybox]: https://www.busybox.net/
+[kernel]: https://kernel.org/
+[aufs]: https://aufs.sourceforge.net/
+[Syslinux Project]: https://wiki.syslinux.org
