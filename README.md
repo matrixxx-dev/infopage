@@ -9,7 +9,7 @@
 [home page]: https://matrixxx.dev/
 
 ## briefly about the matrixxx project:
-- see <./readme-matrixxx.md>
+- see [readme-matrixxx.md](./readme-matrixxx.md)
 
 ## notes:
 - The Markdown files contain a Pandoc specific extension: yaml_metadata_block. This is not correctly processed by GitHub.
