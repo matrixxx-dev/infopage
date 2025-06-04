@@ -6,10 +6,10 @@
 
 [github-pages]: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
 [pandoc]: https://pandoc.org
-[home page](https://matrixxx.dev/)
+[home page]: https://matrixxx.dev/
 
 ## briefly about the matrixxx project:
-- see <readme-matrixxx.md>
+- see <./readme-matrixxx.md>
 
 ## notes:
 - The Markdown files contain a Pandoc specific extension: yaml_metadata_block. This is not correctly processed by GitHub.
