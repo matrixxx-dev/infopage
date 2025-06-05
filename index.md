@@ -25,5 +25,5 @@ auf verschiedenster x86-Hardware in gleicher gewohnter Art und Weise nutzbar und
 bedienbar ist (soweit diese Hardware USB Flash Laufwerke als Bootmedium zulässt).
 
 - [Systembeschreibung](introduction.html) (eine Einführung)
-- [Download](download.html)
 - [Blog](blog.html) (Stand der Dinge)
+- [Download](download.html)

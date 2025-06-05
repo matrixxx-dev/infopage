@@ -14,11 +14,19 @@ $endfor$
 </head>
 <body>
 <hr />
-<header class="mitte">
-  <a href="index.html" title="Startseite">
-    <img src="images/logo.avif" alt="[matrixxx]" width="100" />
-  </a>
-  <text>Ein D.I.Y Live System</text>
+<header>
+  <div class="mitte">
+    <a href="index.html" title="Startseite">
+      <img src="images/logo.avif" alt="[matrixxx]" width="100" />
+    </a>
+    <text>Ein D.I.Y Live System</text>
+  </div>
+  <ul class="mitte">
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="introduction.html">Systembeschreibung</a></li>
+    <li><a href="download.html">Download</a></li>
+  </ul>
 </header>
 <hr />
 $for(include-before)$

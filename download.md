@@ -11,3 +11,9 @@ lang: de
 <!-- ![](svg/todo.svg){ alt="[matrixxx] TODO" width="100" } -->
 <img src="svg/todo.svg" alt="[matrixxx] TODO" width="100" />
 
+- **git repository:** <https://github.com/matrixxx-dev>
+  - matrixxx-initrd-build
+  - matrixxx-kernel-build
+  - matrixxx-os-build
+
+(GNU General Public License v3.0 Updated Jun 3, 2025)

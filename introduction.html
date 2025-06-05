@@ -14,18 +14,128 @@
 </head>
 <body>
 <hr />
-<header class="mitte">
-  <a href="index.html" title="Startseite">
-    <img src="images/logo.avif" alt="[matrixxx]" width="100" />
-  </a>
-  <text>Ein D.I.Y Live System</text>
+<header>
+  <div class="mitte">
+    <a href="index.html" title="Startseite">
+      <img src="images/logo.avif" alt="[matrixxx]" width="100" />
+    </a>
+    <text>Ein D.I.Y Live System</text>
+  </div>
+  <ul class="mitte">
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="introduction.html">Systembeschreibung</a></li>
+    <li><a href="download.html">Download</a></li>
+  </ul>
 </header>
 <hr />
 <main class="markdown-body">
 
-<h1 id="systembeschreibung-eine-einführung">Systembeschreibung (eine
-Einführung)</h1>
 <p><img src="svg/todo.svg" alt="[matrixxx] TODO" width="100" /></p>
+<h1
+id="systembeschreibung-des-matrixxx-projekt-eine-einführung">Systembeschreibung
+des Matrixxx-Projekt (eine Einführung)</h1>
+<ul>
+<li>Ein Linux Live-System zum Selberbauen - basierend auf
+Shell-Skripten.</li>
+<li>In erster Linie für die Nutzung auf USB-Sticks (oder
+Ähnlichem).</li>
+<li>Wobei die integrierte Hardwareerkennung ermöglicht das eigene, für
+sich selbst zugeschnittene Betriebssystem vom USB-Stick mit einer großen
+Anzahl von x86 Systemen zu starten (wobei momentan der Fokus auf 64-bit
+Systemen liegt).</li>
+<li>Also ein System das sich auf verschiedensten Rechnern gleich verhält
+und in die Hosentasche passt.</li>
+<li>Für die Erzeugung meines eigenen Systems sind nur wenige
+Skriptaufrufe notwendig - und eine Anpassung ist auch nicht sonderlich
+aufwendig.</li>
+</ul>
+<h2 id="wofür-steht-matrixxx">Wofür steht matrixxx?</h2>
+<p>Eine Sammlung von Skripten zur Generierung von:</p>
+<ul>
+<li>einem Initramfs (Busybox basiert) inklusive einem
+benutzerdefinierten Kernel</li>
+<li>einem auf Debian basierten System, verpackt in mehrere squashfs -
+Dateien</li>
+</ul>
+<h3 id="verwendetes-bootmedium-struktur">Verwendetes Bootmedium
+(Struktur)</h3>
+<ul>
+<li>Das Bootmedium ist ein USB-Stick (o. Ä.) oder eine Festplatte</li>
+<li>Extlinux/Syslinux wird als Bootloader verwendet
+<ul>
+<li>Legacy-Boot und UEFI</li>
+</ul></li>
+<li>Der benutzerdefinierte Kernel wird vom Bootloader gestartet, der
+wiederum ein benutzerdefiniertes Initramfs startet. Gesteuert durch die
+Bootloader-Konfigurationsdatei.</li>
+<li>Das benutzerdefinierte Initramfs mountet die schreibgeschützten
+Betriebssystem-Images als <q>Union-Mount-Dateisystem</q> inklusive einem
+beschreibbaren Layers und startet den Betriebssystem-Init-Prozess.</li>
+</ul>
+<h3 id="kernel-build">Kernel-Build:</h3>
+<ul>
+<li>Erstellen eines angepassten Kernels
+<ul>
+<li>Enthält <q>aufs</q> (Advanced Multi Layered Unification
+Filesystem)</li>
+<li>Enthält Treiber zum Booten des USB-Sticks (oder ähnlicher
+Geräte)</li>
+</ul></li>
+</ul>
+<h3 id="initramfs-build">Initramfs-Build:</h3>
+<ul>
+<li>Erstellen eines angepassten Initramfs
+<ul>
+<li>Enthält eine angepasste Busybox basierend auf Version v1.37.0</li>
+<li>Enthält ein Init-Skript, das
+<ul>
+<li>mit einem frühest möglichen <q>Hook</q> (Aussprungspunkt) versehen
+ist, also sobald das eigentliche Boot Medium gemountet ist (lässt
+Anpassungen am Initramfs einfacher umsetzen)</li>
+<li>Ermöglicht verschiedene CHEATCODES über Kernel-Parameter
+(Bootloader)
+<ul>
+<li>z.B. die Auswahl des Union-Mount-Dateisystems
+<ul>
+<li><q>aufs</q> (Standard) oder <q>OverlayFS</q></li>
+</ul></li>
+<li>…</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><em>Hinweis: Die schreibgeschützten Images des Betriebssystems sind
+vom Typ <q>squashfs</q> (<q>cloop</q>- Integration ist noch
+geplant)</em></li>
+</ul>
+<h3 id="system-build">System-Build:</h3>
+<ul>
+<li>Erstellen eines Debian-basierten Systems, verpackt in mehrere
+Image-Dateien vom Typ <q>squashfs</q>
+<ul>
+<li>Verwendete Softwarepakete: stabil, testen, instabil</li>
+<li>Verwendete Softwarekategorien: Hauptbeitrag, nicht-freie
+Firmware</li>
+</ul></li>
+<li>Aufgrund der Limitierung der Dateigröße auf &lt; 4GB (bei vfat)
+können mehrere Image Dateien (Layer) erzeugt werden, welche bei der
+Erstellung in ein <q>Union-Mount-Dateisystem</q> eingebunden sind.
+(Dadurch ist eine sehr große Softwareauswahl möglich)</li>
+</ul>
+<h3 id="build-system">Build-System:</h3>
+<ul>
+<li>Mit der <q>Standard</q> - Softwareauswahl lässt sich in nur wenigen
+Schritten (Skript-Aufrufen) ein komplettes Debian basiertes
+Betriebssystem zusammenstellen</li>
+</ul>
+<h4 id="links">Links:</h4>
+<ul>
+<li>Homepage von <a href="https://www.busybox.net/">busybox</a></li>
+<li>Homepage von <a href="https://kernel.org/">kernel.org</a></li>
+<li>Homepage von <a href="https://aufs.sourceforge.net/">aufs</a></li>
+<li>Homepage des <a href="https://wiki.syslinux.org">Syslinux
+Project</a></li>
+</ul>
 
 </main>
 <footer>

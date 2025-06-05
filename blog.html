@@ -14,15 +14,25 @@
 </head>
 <body>
 <hr />
-<header class="mitte">
-  <a href="index.html" title="Startseite">
-    <img src="images/logo.avif" alt="[matrixxx]" width="100" />
-  </a>
-  <text>Ein D.I.Y Live System</text>
+<header>
+  <div class="mitte">
+    <a href="index.html" title="Startseite">
+      <img src="images/logo.avif" alt="[matrixxx]" width="100" />
+    </a>
+    <text>Ein D.I.Y Live System</text>
+  </div>
+  <ul class="mitte">
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="introduction.html">Systembeschreibung</a></li>
+    <li><a href="download.html">Download</a></li>
+  </ul>
 </header>
 <hr />
 <main class="markdown-body">
 
+<h2 id="release-notes">Release Notes:</h2>
+<p><date><strong>06.2025</strong></date></p>
 <p><img src="svg/todo.svg" alt="[matrixxx] TODO" width="100" /></p>
 <h2 id="hintergründe-zur-motivation">Hintergründe zur Motivation</h2>
 <p><date><strong>12.12.2024</strong></date></p>
@@ -75,11 +85,17 @@ beschreibbaren obersten Layer aufgesetzt.</p>
 enthalten bzw. auch nicht vorgesehenen.</p>
 <ul>
 <li>momentan besteht das Betriebssystem nur aus reinen 32bit bzw. 64bit
-Versionen</li>
+Versionen (die 32bit Variante soll im Weiteren mit beiden Kernel
+Varianten lauffähig sein)</li>
 <li>die Nutzung von „cloop“ Containern mit den neueren Kernel kann ich
 zu Zeit nicht anbieten</li>
+<li>die Nutzung eines externen Speichermediums für den persistenten
+Speicher ist noch nicht umgesetzt</li>
 <li>das Betriebssystem hat nur die Desktop-Umgebung LXDE integriert</li>
-<li>ADRIANE ist momentan nicht integriert</li>
+<li>Compiz ist noch nicht ausreichend getestet, soll aber wieder einfach
+nutzbar werden</li>
+<li>ADRIANE (Audio Desktop Reference Implementation and Networking
+Environment) von Klaus Knopper ist momentan nicht integriert</li>
 <li>die Terminalserver und „Bootfrom“ Funktionalität ist momentan
 ausgebaut</li>
 <li>eine echte Installation wird nicht vorgesehenen (das geht anders
@@ -89,7 +105,8 @@ leichter)</li>
 „github“ zur Verfügung stellen.</p>
 <p>So der Plan, mit der Hoffnung, das dies auch für andere von Interesse
 sein wird.</p>
-<p>Mit freundlichen Grüßen Holger Schwarz</p>
+<p>Mit freundlichen Grüßen</p>
+<p>Holger Schwarz</p>
 
 </main>
 <footer>

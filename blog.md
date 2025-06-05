@@ -6,6 +6,9 @@ lang: de
 ---
 
 <!-- *********************************************************************** -->
+## Release Notes:
+<date>**06.2025**</date>
+
 <!-- ![](svg/todo.svg){ alt="[matrixxx] TODO" width="100" } -->
 <img src="svg/todo.svg" alt="[matrixxx] TODO" width="100" />
 
@@ -67,10 +70,16 @@ Einiges was in Knoppix möglich war ist allerdings momentan nicht enthalten
 bzw. auch nicht vorgesehenen.
 
 - momentan besteht das Betriebssystem nur aus reinen 32bit bzw. 64bit Versionen
+  (die 32bit Variante soll im Weiteren mit beiden Kernel Varianten lauffähig sein)
 - die Nutzung von „cloop“ Containern mit den neueren Kernel kann ich zu Zeit
   nicht anbieten
+- die Nutzung eines externen Speichermediums für den persistenten Speicher ist
+  noch nicht umgesetzt
 - das Betriebssystem hat nur die Desktop-Umgebung LXDE integriert
-- ADRIANE ist momentan nicht integriert
+- Compiz ist noch nicht ausreichend getestet, soll aber wieder einfach nutzbar
+  werden
+- ADRIANE (Audio Desktop Reference Implementation and Networking Environment)
+  von Klaus Knopper ist momentan nicht integriert
 - die Terminalserver und „Bootfrom“ Funktionalität ist momentan ausgebaut
 - eine echte Installation wird nicht vorgesehenen (das geht anders leichter)
 
@@ -80,6 +89,7 @@ Die Skripten, Daten und die zugehörigen Beschreibungen werde ich auf
 So der Plan, mit der Hoffnung, das dies auch für andere von Interesse sein wird.
 
 Mit freundlichen Grüßen
+
 Holger Schwarz
 
 

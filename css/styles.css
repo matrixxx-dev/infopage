@@ -6,11 +6,6 @@ body {
   font-family: Cantarell, Helvetica, Arial, sans-serif;
 }
 
-header {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
 nav {
   position: sticky;
   top: 0;
@@ -19,13 +14,6 @@ nav {
   /* -> Navigation jederzeit anklickbar ist */
   z-index: 99;
 }
-
-/*
-footer,
-nav {
-  backdrop-filter: blur(8px);
-}
-*/
 
 main
 {
@@ -70,15 +58,18 @@ main
   object-fit: fill;
 }
 
-footer ul,
-nav ul {
+header {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+footer ul, nav ul, header ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-footer ul li,
-nav ul li {
+footer ul li, nav ul li, header ul li{
   padding-left: 16px;
   padding-right: 16px;
 }
