@@ -5,11 +5,12 @@
 
 ## What does matrixxx stand for?
 Scripts for generating:
+
 1. an initramfs system (busybox-based) for booting a unionfs-based linux
    system with a custom kernel
 2. an union-mounted file system based on Debian
 
-## used boot medium (structure)
+### used boot medium (structure)
 - Boot medium is a USB stick (or similar) or a hard disk
 - Extlinux/syslinux is used as bootloader
   - Legacy boot and UEFI
@@ -18,12 +19,12 @@ Scripts for generating:
 - The customized initramfs mounts the read-only operating system images as
   a “Union File System” and starts the OS init process.
 
-### kernel build
+### kernel build:
 - generate a customized kernel
   - contains "aufs" (advanced multi layered unification filesystem)
   - contains drivers to boot the USB stick (or similar)
 
-### initramfs build
+### initramfs build:
 - generate a customized initramfs
    - contains a customized busybox which is based on version v1.37.0
    - contains a init script which
@@ -35,12 +36,12 @@ Scripts for generating:
 - *note:* the read-only images (for union mount) of the operating system are of
   type "squashfs" ("cloop" integration is planned)
 
-### system build
+### system build:
 - generate a debian based system packed in several "squashfs" files
   - used suites: stable testing unstable
   - used software categories: main contrib non-free-firmware
 
-### links:
+#### links:
 - home page of [busybox][]
 - home page of [kernel.org][kernel]
 - home page of [aufs][]

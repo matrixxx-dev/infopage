@@ -1,0 +1,15 @@
+standalone: true
+toc: false
+toc-depth: 3
+
+## HTML5
+template: default-markdown.html5
+css: ${USERDATA}/css/version-5.8.1.css/github-markdown.css
+resource-path: ['.', '${USERDATA}/style-github-markdown']
+include-in-header:
+- header
+- no-title-block-header
+include-before-body: body_start
+include-after-body: body_end
+strip-comments: true
+html-q-tags: true                           ## <q> for quotes in HTML (Zitate)

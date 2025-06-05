@@ -16,6 +16,8 @@ FILE_MD="$1"
 DATA_DIR="pandoc"
 HTML_ONLY="true"
 
+DEFAULT_YAML_NAME="github-markdown"
+
 ## -------------------------------------------------------------------------- ##
 ## FUNCTIONS:
 ## -------------------------------------------------------------------------- ##
@@ -35,7 +37,7 @@ func_process(){ # md_file="$1"
     fi
   done < "${md_file}"
 
-  [ -z "${config_name}" ] && config_name="standard"
+  [ -z "${config_name}" ] && config_name="${DEFAULT_YAML_NAME}"
 
   ## check if default file exists ...
   ## - yes: call pandoc
@@ -75,11 +77,32 @@ func_run_pandoc(){ # md_file="$1"; default_file="$2"
   ##                          set ${USERDATA}
   ##   --defaults=FILE        Specify a set of default option settings
   ##                          (search in [data-dir]/defaults)
-  pandoc \
-  --data-dir="${DATA_DIR}" \
-  --defaults="${default_file}" \
-  -f markdown -t html5 "${md_file}" -o "${output_file}"
+  if [ "${default_file}" = "${DEFAULT_YAML_NAME}.yaml" ]; then
+    pandoc \
+    --data-dir="${DATA_DIR}" \
+    --defaults="${default_file}" \
+    -f markdown -t html5 "${md_file}" | func_stdin_to_www
+    #echo '<h1>hello, world</h1>' | firefox "data:text/html;base64,$(base64 -w 0 <&0)"
+    #cat | firefox -new-instance /dev/fd/0
+  else
+    pandoc \
+    --data-dir="${DATA_DIR}" \
+    --defaults="${default_file}" \
+    -f markdown -t html5 "${md_file}" -o "${output_file}"
+  fi
 }
+
+## -------------------------------------------------------------------------- ##
+## read from stdin, write to a temp file, open the temp file in a browser
+## finally delete the temp file
+func_stdin_to_www(){
+  local tmpfile
+  #tmpfile=$(mktemp -q)
+  tmpfile="./temp.html"
+  cat > "${tmpfile}"
+  x-www-browser -new-instance "${tmpfile}" && rm -f "${tmpfile}"
+}
+
 
 ## -------------------------------------------------------------------------- ##
 ## MAIN:

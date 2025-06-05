@@ -4,9 +4,10 @@
   - Linux: *'markdown to html'* with own configuration shell script and pandoc
 - **home page:** <https://matrixxx-dev.github.io/infopage> diverted to
   <https://matrixxx.dev/>
+- **git repository:** <https://github.com/matrixxx-dev/infopage>
 
 ## briefly about the matrixxx project:
-- see [readme-matrixxx.md](./readme-matrixxx.md)
+- see [readme-matrixxx.md](./doc/readme-matrixxx.md)
 
 ## notes:
 - The Markdown files contain a Pandoc specific extension: yaml_metadata_block.
