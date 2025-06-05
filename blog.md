@@ -3,10 +3,11 @@ defaults: website
 title: Motiv [matrixxx]
 toc: false
 lang: de
-...
+---
 
 <!-- *********************************************************************** -->
-![](svg/todo.svg){ width="100" alt="[matrixxx] TODO" }
+<!-- ![](svg/todo.svg){ alt="[matrixxx] TODO" width="100" } -->
+<img src="svg/todo.svg" alt="[matrixxx] TODO" width="100" />
 
 ## Hintergründe zur Motivation
 

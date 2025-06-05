@@ -12,12 +12,12 @@ Scripts for generating:
 ## used boot medium (structure)
 - Boot medium is a USB stick (or similar) or a hard disk
 - Extlinux/syslinux is used as bootloader
-  - Legacy boot and UEFI 
+  - Legacy boot and UEFI
 - The customized kernel is started by the bootloader, which in turn starts
   a customized initramfs. Controlled by the bootloader configurations file.
 - The customized initramfs mounts the read-only operating system images as
-  a “Union File System” and starts the OS init process. 
- 
+  a “Union File System” and starts the OS init process.
+
 ### kernel build
 - generate a customized kernel
   - contains "aufs" (advanced multi layered unification filesystem)
@@ -32,8 +32,8 @@ Scripts for generating:
          - allows you to select the union mount file system
             - "aufs" (default) or "OverlayFS"
          - ...
-- *note:* the read-only images (for union mount) of the operating system are of type
-  "squashfs" ("cloop" integration is planned)
+- *note:* the read-only images (for union mount) of the operating system are of
+  type "squashfs" ("cloop" integration is planned)
 
 ### system build
 - generate a debian based system packed in several "squashfs" files

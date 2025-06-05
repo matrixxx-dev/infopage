@@ -3,9 +3,8 @@ defaults: website
 title: Datenschutz [matrixxx]
 toc: false
 lang: de
-...
+---
 
-<!-- *********************************************************************** -->
 # Datenschutzerklärung
 <p>Stand: 01.04.2025</p>
 
