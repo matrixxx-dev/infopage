@@ -47,6 +47,7 @@ Scripts for generating:
 - home page of [aufs][]
 - home page of [Syslinux Project][]
 
+<!-- *********************************************************************** -->
 [busybox]: https://www.busybox.net/
 [kernel]: https://kernel.org/
 [aufs]: https://aufs.sourceforge.net/
