@@ -60,8 +60,10 @@ Eine Sammlung von Skripten zur Generierung von:
 ### System-Build:
 - Erstellen eines Debian-basierten Systems, verpackt in mehrere
   Image-Dateien vom Typ "squashfs"
-  - Verwendete Softwarepakete: stabil, testen, instabil
-  - Verwendete Softwarekategorien: Hauptbeitrag, nicht-freie Firmware
+  - Mögliche Softwarepakete aus stable, testing, unstable, experimental
+    (konfigurierbar)
+  - Mögliche Softwarekategorien: main, contrib, non-free, non-free-firmware
+    (konfigurierbar)
 - Aufgrund der Limitierung der Dateigröße auf < 4GB (bei vfat) können mehrere
   Image Dateien (Layer) erzeugt werden, welche bei der Erstellung in ein
   'Union-Mount-Dateisystem' eingebunden sind. (Dadurch ist eine sehr große
