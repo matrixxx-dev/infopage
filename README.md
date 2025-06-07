@@ -9,7 +9,8 @@
 ## briefly about the matrixxx project:
 - see [readme: matrixxx.md](./doc/readme-matrixxx.md)
 
-## notes:
+********************************************************************************
+### *notes:*
 - *The markdown files contain a pandoc specific extension: yaml_metadata_block.
   This is not correctly processed by GitHub.*
 
