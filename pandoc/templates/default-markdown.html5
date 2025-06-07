@@ -29,7 +29,6 @@ $if(mathjax)$
 $endif$
   $math$
 $endif$
-  <base target="_blank"/>
 </head>
 
 <body>
