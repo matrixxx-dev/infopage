@@ -11,8 +11,8 @@ toc: false
   <https://matrixxx.dev/>
 - **git repository:** <https://github.com/matrixxx-dev/infopage>
 
-## briefly about the matrixxx project:
-- see [readme: matrixxx.md](./doc/readme-matrixxx.md)
+#### briefly:
+- see [readme: about][]
 
 ********************************************************************************
 > [!NOTE]
@@ -30,3 +30,6 @@ toc: false
 [github-pages]: https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
 [pandoc]: https://pandoc.org
 [home page]: https://matrixxx.dev/
+[readme: about]: doc/readme-matrixxx.md
+[readme: process]: doc/readme-process.md
+[readme: usage]: doc/readme-usage.md
