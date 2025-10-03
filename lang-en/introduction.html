@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Introduction [matrixxx]</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    @media (prefers-color-scheme: dark) {
+      body { background-color: #FFFFFF; }
+    }
+  </style>
+</head>
+<body>
+<hr />
+<header>
+  <div class="mitte">
+    <a href="../index_en.html" title="Start page">
+      <img src="../images/logo.avif" alt="[matrixxx]" width="100" />
+    </a>
+    <text>a D.I.Y Live System</text>
+  </div>
+  <ul class="mitte">
+    <li><a href="../index_en.html">Start page</a></li>
+    <li><a href="./blog.html">Blog</a></li>
+    <li><a href="./introduction.html">System description</a></li>
+    <li><a href="./download.html">Download</a></li>
+  </ul>
+</header>
+<hr />
+<main class="markdown-body">
+
+<p><img src="../svg/todo.svg" alt="[matrixxx] TODO" width="100" /></p>
+<h1
+id="system-description-of-the-matrixxx-project-an-introduction">System
+description of the Matrixxx project (an introduction)</h1>
+<ul>
+<li>A Linux live system for you to build yourself – based on shell
+scripts.</li>
+<li>Primarily for use on USB sticks (or similar).</li>
+<li>The integrated hardware detection allows you to boot your own,
+customized operating system from the USB stick with a large number of
+x86 systems (currently focusing on 64-bit systems).</li>
+<li>A system that behaves the same on a wide variety of computers and
+fits in your pocket.</li>
+<li>Only a few script calls are necessary to create my own system - and
+customization is simple.</li>
+</ul>
+<h2 id="what-does-matrixxx-stand-for">What does matrixxx stand for?</h2>
+<p>For a collection of scripts for generating:</p>
+<ul>
+<li>an initramfs (busybox based) including a custom kernel</li>
+<li>a Debian based system packaged in multiple squashfs files</li>
+</ul>
+<h3 id="boot-medium-structure">Boot medium (structure)</h3>
+<ul>
+<li>The boot medium is a USB stick (or similar)</li>
+<li>Extlinux/Syslinux is used as the bootloader
+<ul>
+<li>Legacy boot and UEFI</li>
+</ul></li>
+<li>The custom kernel is started by the bootloader, which in turn starts
+a custom initramfs. Controlled by the bootloader configuration
+file.</li>
+<li>The custom initramfs mounts the read-only operating system images as
+an union mount file system, including a writable layer, and starts the
+operating system init process.</li>
+</ul>
+<h3 id="kernel-build">Kernel-Build:</h3>
+<ul>
+<li>Create a customized kernel
+<ul>
+<li>Contains <q>aufs</q> (Advanced Multi Layered Unification
+Filesystem)</li>
+<li>Contains drivers for booting from USB sticks (or similar
+devices)</li>
+</ul></li>
+</ul>
+<h3 id="initramfs-build">Initramfs-Build:</h3>
+<ul>
+<li>Create a customized initramfs
+<ul>
+<li>Contains a customized busybox based on version v1.37.0</li>
+<li>Contains an init script that
+<ul>
+<li>is provided with the earliest possible <q>hook</q> (exit point),
+i.e., as soon as the actual boot medium is mounted (makes customizations
+to the initramfs easier)</li>
+<li>Enables various cheat codes via kernel parameters (bootloader)</li>
+</ul></li>
+</ul></li>
+<li><em>Note: The read-only images of the operating system are of the
+<q>squashfs</q> type</em></li>
+</ul>
+<h3 id="system-build">System-Build:</h3>
+<ul>
+<li>Create a Debian-based system, packaged in multiple <q>squashfs</q>
+image files
+<ul>
+<li>Possible software packages: stable, testing, unstable, and
+experimental (configurable)</li>
+<li>Possible software categories: main, contrib, non-free, and non-free
+firmware (configurable)</li>
+</ul></li>
+<li>Due to the file size limitation of &lt; 4GB (with vfat), multiple
+image files (layers) can be created, which are then mounted in a union
+mount file system. (This allows for a very large selection of
+software)</li>
+</ul>
+<h3 id="build-system">Build-System:</h3>
+<ul>
+<li>With the <q>Standard</q> software selection, a complete Debian-based
+operating system can be assembled in just a few steps (script
+calls)</li>
+</ul>
+<h4 id="links">Links:</h4>
+<ul>
+<li>Homepage von <a href="https://www.debian.org">debian.org</a></li>
+<li>Homepage von <a href="https://kernel.org/">kernel.org</a></li>
+<li>Homepage von <a href="https://aufs.sourceforge.net/">aufs</a></li>
+<li>Homepage von <a href="https://www.busybox.net/">busybox</a></li>
+<li>Homepage des <a href="https://wiki.syslinux.org">Syslinux
+Project</a></li>
+</ul>
+
+</main>
+<footer>
+  <hr />
+  <ul class="mitte">
+    <li><a href="./impressum.html">Imprint</a></li>
+    <li><a href="./datenschutz.html">Privacy</a></li>
+  </ul>
+  <h6 class="mitte">©matrixxx.dev [info@matrixxx.dev]</h6>
+  <h6 class="mitte">(matrixxx.dev is not responsible for the content of external websites)</h6>
+  <hr />
+</footer>
+</body>
+</html>

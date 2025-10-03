@@ -6,8 +6,8 @@ lang: de
 ---
 
 <!-- *********************************************************************** -->
-<!-- ![](svg/todo.svg){ alt="[matrixxx] TODO" width="100" } -->
-<img src="svg/todo.svg" alt="[matrixxx] TODO" width="100" />
+<!-- ![](../svg/todo.svg){ alt="[matrixxx] TODO" width="100" } -->
+<img src="../svg/todo.svg" alt="[matrixxx] TODO" width="100" />
 
 # Systembeschreibung des Matrixxx-Projekt (eine Einführung)
 - Ein Linux Live-System zum Selberbauen - basierend auf Shell-Skripten.
@@ -51,11 +51,8 @@ Eine Sammlung von Skripten zur Generierung von:
       also sobald das eigentliche Boot Medium gemountet ist
       (lässt Anpassungen am Initramfs einfacher umsetzen)
     - Ermöglicht verschiedene CHEATCODES über Kernel-Parameter (Bootloader)
-      - z.B. die Auswahl des Union-Mount-Dateisystems
-        - "aufs" (Standard) oder "OverlayFS"
-      - ...
 - *Hinweis: Die schreibgeschützten Images des Betriebssystems sind vom Typ
-  "squashfs" ('cloop'- Integration ist noch geplant)*
+  "squashfs"*
 
 ### System-Build:
 - Erstellen eines Debian-basierten Systems, verpackt in mehrere

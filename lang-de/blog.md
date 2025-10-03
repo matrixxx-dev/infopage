@@ -1,16 +1,16 @@
 ---
 defaults: website
-title: Motiv [matrixxx]
+title: blog [matrixxx]
 toc: false
 lang: de
 ---
 
 <!-- *********************************************************************** -->
 ## Release Notes:
-<date>**06.2025**</date>
+<date>**todo**</date>
 
-<!-- ![](svg/todo.svg){ alt="[matrixxx] TODO" width="100" } -->
-<img src="svg/todo.svg" alt="[matrixxx] TODO" width="100" />
+<!-- ![](../svg/todo.svg){ alt="[matrixxx] TODO" width="100" } -->
+<img src="../svg/todo.svg" alt="[matrixxx] TODO" width="100" />
 
 ## Hintergründe zur Motivation
 

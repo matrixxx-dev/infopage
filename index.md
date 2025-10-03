@@ -12,18 +12,19 @@ lang: de
 sich sein eigenes Linux Live System erzeugen kann. (Zumindest erzeuge ich damit
 mein eigenes System - und diese Möglichkeit möchte ich in diesem Zuge der
 Allgemeinheit zur Verfügung stellen).
-Hiermit lassen sich
+
+Hiermit lassen sich:
 
 - ein für diese Zwecke angepasster moderner Kernel erzeugen
 - ein einfaches von USB Flash Laufwerken startbares Boot System aufbauen
-- und ein auf Debian basiertes modulares Betriebssystem zusammenstellen
+- und ein auf Debian basierendes modulares Betriebssystem zusammenstellen
 
-Aus einem 'Build' Lauf entsteht daraus ein System, welches
+Zusammen gebaut entsteht daraus ein System, welches
 direkt von einem USB Flash Laufwerk produktiv genutzt werden kann, ohne dieses
 zuvor installiert haben zu müssen. Ein System also für die Hosentasche, dass
-auf verschiedenster x86-Hardware in gleicher gewohnter Art und Weise nutzbar und
-bedienbar ist (soweit diese Hardware USB Flash Laufwerke als Bootmedium zulässt).
+auf verschiedenster x86-Hardware in gleicher gewohnter Art und Weise startet,
+nutzbar und bedienbar ist.
 
-- [Systembeschreibung](introduction.html) (eine Einführung)
-- [Blog](blog.html) (Stand der Dinge)
-- [Download](download.html)
+- [Systembeschreibung](lang-de/introduction.html) (eine Einführung)
+- [Blog](lang-de/blog.html) (Stand der Dinge)
+- [Download](lang-de/download.html)

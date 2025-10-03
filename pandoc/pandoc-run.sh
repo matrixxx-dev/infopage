@@ -13,7 +13,7 @@
 ##
 ## ########################################################################## ##
 FILE_MD="$1"
-DATA_DIR="pandoc"
+DATA_DIR="$2"
 HTML_ONLY="true"
 
 DEFAULT_YAML_NAME="github-markdown"
@@ -43,8 +43,6 @@ func_process(){ # md_file="$1"
   ## - yes: call pandoc
   ## - no:  error and exit
   default_file="${config_name}.yaml"
-  #echo "default file: ${default_file}"
-  #echo "default file: ${DATA_DIR}/defaults/${default_file}"
   if [ -f "${default_file}" ] \
   || [ -f "${DATA_DIR}"/defaults/"${default_file}" ]
   then
@@ -82,8 +80,6 @@ func_run_pandoc(){ # md_file="$1"; default_file="$2"
     --data-dir="${DATA_DIR}" \
     --defaults="${default_file}" \
     -f markdown -t html5 "${md_file}" | func_stdin_to_www
-    #echo '<h1>hello, world</h1>' | firefox "data:text/html;base64,$(base64 -w 0 <&0)"
-    #cat | firefox -new-instance /dev/fd/0
   else
     pandoc \
     --data-dir="${DATA_DIR}" \

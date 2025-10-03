@@ -3,7 +3,7 @@ toc: true
 toc-depth: 3
 
 ## HTML5
-template: default-website.html5
+template: default-website_en.html5
 css: ../css/styles.css
 resource-path: ['.', '${USERDATA}/style-website']
 include-in-header:

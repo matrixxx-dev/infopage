@@ -8,10 +8,10 @@ lang: de
 # Datenschutzerklärung
 <p>Stand: 01.04.2025</p>
 
-### Verantwortlicher {#Responsible}
+### Verantwortlicher
 siehe [Impressum](impressum.html)
 
-### Datenschutzerklärung gemäß Art. 13 DSGVO {#DSGVO}
+### Datenschutzerklärung gemäß Art. 13 DSGVO
 Diese Webseite selbst speichert keine personenbezogene Daten, verwendet
 keine Cookies und verfolgt keine Aktivitäten der Besucher.
 
