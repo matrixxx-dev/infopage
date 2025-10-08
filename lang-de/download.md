@@ -4,8 +4,9 @@ title: Download [matrixxx]
 toc: false
 lang: de
 ---
-
 <!-- *********************************************************************** -->
+
+********************************************************************************
 # Download Möglichkeiten
 
 <!-- ![](../svg/todo.svg){ alt="[matrixxx] TODO" width="100" } -->
@@ -17,3 +18,5 @@ lang: de
   - matrixxx-os-build
 
 (GNU General Public License Version 2, June 1991)
+
+********************************************************************************

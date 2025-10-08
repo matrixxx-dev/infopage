@@ -4,9 +4,9 @@ title: Startpage [matrixxx]
 toc: false
 lang: de
 ---
-
 <!-- *********************************************************************** -->
 
+********************************************************************************
 # "matrixxx" - ein D.I.Y Linux Live System
 **matrixxx** ist zunächst eine Sammlung von bash Skripten, mit deren Hilfe man
 sich sein eigenes Linux Live System erzeugen kann. (Zumindest erzeuge ich damit
@@ -28,3 +28,5 @@ nutzbar und bedienbar ist.
 - [Systembeschreibung](lang-de/introduction.html) (eine Einführung)
 - [Blog](lang-de/blog.html) (Stand der Dinge)
 - [Download](lang-de/download.html)
+
+********************************************************************************

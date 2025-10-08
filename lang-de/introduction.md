@@ -4,8 +4,9 @@ title: Einführung [matrixxx]
 toc: false
 lang: de
 ---
-
 <!-- *********************************************************************** -->
+
+********************************************************************************
 <!-- ![](../svg/todo.svg){ alt="[matrixxx] TODO" width="100" } -->
 <img src="../svg/todo.svg" alt="[matrixxx] TODO" width="100" />
 
@@ -77,6 +78,8 @@ Eine Sammlung von Skripten zur Generierung von:
 - Homepage von [aufs][]
 - Homepage von [busybox][]
 - Homepage des [Syslinux Project][]
+
+********************************************************************************
 
 <!-- *********************************************************************** -->
 [debian]: https://www.debian.org

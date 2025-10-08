@@ -13,7 +13,6 @@ $for(header-includes)$
 $endfor$
 </head>
 <body>
-<hr />
 <header>
   <div class="mitte">
     <a href="../index_en.html" title="Start page">
@@ -28,7 +27,6 @@ $endfor$
     <li><a href="./download.html">Download</a></li>
   </ul>
 </header>
-<hr />
 $for(include-before)$
 $include-before$
 $endfor$
@@ -47,14 +45,12 @@ $for(include-after)$
 $include-after$
 $endfor$
 <footer>
-  <hr />
   <ul class="mitte">
     <li><a href="./impressum.html">Imprint</a></li>
     <li><a href="./datenschutz.html">Privacy</a></li>
   </ul>
   <h6 class="mitte">©matrixxx.dev [info@matrixxx.dev]</h6>
   <h6 class="mitte">(matrixxx.dev is not responsible for the content of external websites)</h6>
-  <hr />
 </footer>
 </body>
 </html>

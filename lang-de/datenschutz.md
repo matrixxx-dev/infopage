@@ -4,7 +4,9 @@ title: Datenschutz [matrixxx]
 toc: false
 lang: de
 ---
+<!-- *********************************************************************** -->
 
+********************************************************************************
 # Datenschutzerklärung
 <p>Stand: 01.04.2025</p>
 
@@ -42,4 +44,5 @@ https://docs.github.com/en/github/site-policy/github-privacy-statement#github-pa
 [Allgemeine Datenschutzerklärung für GitHub (de)]:
 https://docs.github.com/de/github/site-policy/github-privacy-statement#github-pages
 
+********************************************************************************
 
