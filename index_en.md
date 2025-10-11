@@ -7,7 +7,7 @@ lang: en
 <!-- *********************************************************************** -->
 
 ********************************************************************************
-# "matrixxx" - ein D.I.Y Linux Live System
+# "matrixxx" - a D.I.Y Linux Live System
 **matrixxx** is, first and foremost, a collection of bash scripts that can be
 used to create your own Linux live system. (At least, I use it to create my
 own system - and I'd like to make this option available to the public.)
