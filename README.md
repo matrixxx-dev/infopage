@@ -14,18 +14,6 @@ toc: false
 #### briefly:
 - see [readme: about][]
 
-********************************************************************************
-> [!NOTE]
-> The markdown files contain a pandoc specific extension:
-> **yaml_metadata_block**. This block is displayed as a table by GitHub.
-
-> [!NOTE]
-> Regarding external links:
-> This website may contain links to external websites operated by third parties,
-> over which I have no control. Therefore, I cannot be held responsible for
-> the content of these external websites. The sole responsibility for the
-> content of these linked pages lies with the respective provider or operator.
-
 <!-- *********************************************************************** -->
 [readme: about]: doc/readme-matrixxx.md
 [readme: content]: doc/readme-content.md
