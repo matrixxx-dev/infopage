@@ -31,50 +31,11 @@
 
 <hr />
 <h1 id="download-möglichkeiten">Download Möglichkeiten</h1>
-<p><img src="../svg/todo.svg" alt="[matrixxx] TODO" width="100" /></p>
 <ul>
 <li><strong>git repository:</strong> <a
 href="https://github.com/matrixxx-dev"
 class="uri">https://github.com/matrixxx-dev</a></li>
 </ul>
-<h4 id="kurzanleitung-ohne-anpassungen">Kurzanleitung (ohne
-Anpassungen)</h4>
-<ul>
-<li><strong>matrixxx-boot-device-content</strong>:
-<ul>
-<li>USB-Stick formatieren mit <q>vfat</q> bzw. <q>fat32</q> oder ext4
-formatieren</li>
-<li>Download als zip (&lt;&gt; Code) und auf dem USB-Stick
-auspacken</li>
-<li>Das Skript /boot/scripts/script-bootinstall.sh auf dem USB-Stick
-ausführen</li>
-</ul></li>
-<li><strong>matrixxx-os-build</strong>: (ToDo: too big! ~20GB Software -
-in SquashFS ~9GB per arch.)
-<ul>
-<li>Repository lokal clonen</li>
-<li>xx-build.sh ausführen (erzeugt jeweils 3 SquashFS Layer für x86
-32-bit und 64-bit) - ca. 3 Std. Laufzeit mit den aktuellen
-Einstellungen</li>
-<li>matrixxx_00/amd64/LAYER* in das Verzeichnis SYSTEM_amd64 des
-USB-Stick kopieren</li>
-<li>matrixxx_00/i386/LAYER* in das Verzeichnis SYSTEM_i386 des USB-Stick
-kopieren</li>
-</ul></li>
-<li><strong>matrixxx-remaster</strong>: (ToDo: fehlende Teile)
-<ul>
-<li>Repository lokal clonen</li>
-<li>PROCESS.sh ausführen (erzeugt 4 SquashFS Layer, welche das OS
-konfigurieren)</li>
-<li>LAYER15, LAYER17, LAYER19 in das Verzeichnis SYSTEM des USB-Stick
-kopieren</li>
-<li>LAYER64 in das Verzeichnis SYSTEM_amd64 des USB-Stick kopieren</li>
-<li>LAYER32 in das Verzeichnis SYSTEM_i386 des USB-Stick kopieren</li>
-</ul></li>
-<li>der USB-Stick sollte nun <q>matrixxx live system</q> enthalten und
-bootfähig sein</li>
-</ul>
-<p>(GNU General Public License Version 2, June 1991)</p>
 <hr />
 
 </main>
@@ -84,7 +45,6 @@ bootfähig sein</li>
     <li><a href="./datenschutz.html">Datenschutz</a></li>
   </ul>
   <h6 class="mitte">©matrixxx.dev [info@matrixxx.dev]</h6>
-  <h6 class="mitte">(matrixxx.dev ist nicht verantwortlich für die Inhalte externer Internetseiten)</h6>
 </footer>
 </body>
 </html>

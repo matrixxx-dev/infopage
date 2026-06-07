@@ -31,51 +31,11 @@
 
 <hr />
 <h1 id="download-options">Download options</h1>
-<p><img src="../svg/todo.svg" alt="[matrixxx] TODO" width="100" /></p>
 <ul>
 <li><strong>git repository:</strong> <a
 href="https://github.com/matrixxx-dev"
 class="uri">https://github.com/matrixxx-dev</a></li>
 </ul>
-<h4 id="quick-guide-without-adjustments">Quick guide (without
-adjustments)</h4>
-<ul>
-<li><strong>matrixxx-boot-device-content</strong>:
-<ul>
-<li>Format USB stick with <q>vfat</q> or <q>fat32</q> or format
-ext4</li>
-<li>Download as zip (&lt;&gt; code) and unpack on the USB stick</li>
-<li>Run the script /boot/scripts/script-bootinstall.sh on the USB
-stick</li>
-</ul></li>
-<li><strong>matrixxx-os-build</strong>: (ToDo: too big! ~20GB Software -
-in SquashFS ~9GB per arch.)
-<ul>
-<li>Clone repository locally</li>
-<li>Run xx-build.sh (creates 3 SquashFS layers each for x86 32-bit and
-64-bit) - approx. 3 hours running time with the current settings
-<ul>
-<li>Copy matrixxx_00/amd64/LAYER* into the SYSTEM_amd64 directory on the
-USB stick</li>
-<li>Copy matrixxx_00/i386/LAYER* into the SYSTEM_i386 directory on the
-USB stick</li>
-</ul></li>
-</ul></li>
-<li><strong>matrixxx-remaster</strong>: (ToDo: missing parts)
-<ul>
-<li>Clone repository locally</li>
-<li>Run PROCESS.sh (creates 4 SquashFS layers that configure the OS)
-<ul>
-<li>Copy LAYER15, LAYER17, LAYER19 into the SYSTEM directory of the USB
-stick</li>
-<li>Copy LAYER64 into the SYSTEM_amd64 directory on the USB stick</li>
-<li>Copy LAYER32 into the SYSTEM_i386 directory of the USB stick</li>
-</ul></li>
-</ul></li>
-<li>now the USB stick should contain <q>matrixxx live system</q> and
-should be bootable</li>
-</ul>
-<p>(GNU General Public License Version 2, June 1991)</p>
 <hr />
 
 </main>
@@ -85,7 +45,6 @@ should be bootable</li>
     <li><a href="./datenschutz.html">Privacy</a></li>
   </ul>
   <h6 class="mitte">©matrixxx.dev [info@matrixxx.dev]</h6>
-  <h6 class="mitte">(matrixxx.dev is not responsible for the content of external websites)</h6>
 </footer>
 </body>
 </html>
