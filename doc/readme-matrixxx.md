@@ -1,6 +1,6 @@
 ---
 defaults: github-markdown
-toc: false
+no-output: true
 ---
 <!-- *********************************************************************** -->
 # matrixxx project

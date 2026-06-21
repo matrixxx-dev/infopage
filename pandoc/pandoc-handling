@@ -1,0 +1,127 @@
+#!/bin/bash
+
+## ########################################################################## ##
+## pandoc handling
+## ########################################################################## ##
+
+## -------------------------------------------------------------------------- ##
+## FUNCTIONS:
+## -------------------------------------------------------------------------- ##
+func_process(){ # md_file="$1"; default_yaml_name="$2"; data_dir="$3"
+  local md_file default_yaml_name data_dir
+  md_file="$1"; default_yaml_name="$2"; data_dir="$3"
+
+  local search_pattern line config_name default_file cut_extension no_output
+  config_name=""
+
+  ## get yaml block of file
+  ## - `REF_YAML_BLOCK` - contains after func_get_yaml_block a array reference
+  func_get_yaml_block "${md_file}" "REF_YAML_BLOCK"
+
+  ## evaluation of the meta data block of the markdown file
+  config_name=$(func_get_pattern_from_array "defaults" "REF_YAML_BLOCK")
+  [ -z "${config_name}" ] && config_name="${default_yaml_name}"
+  default_file="${config_name}.yaml"
+
+  cut_extension=$(func_get_pattern_from_array "cut-extension" "REF_YAML_BLOCK")
+  [ -z "${cut_extension}" ] && cut_extension="false"
+
+  no_output=$(func_get_pattern_from_array "no-output" "REF_YAML_BLOCK")
+  [ -z "${no_output}" ] && no_output="false"
+
+  echo "md_file: ${md_file}"
+  echo "default_yaml_name: ${default_yaml_name}"
+  echo "data_dir: ${data_dir}"
+  echo "- default_file: ${default_file}"
+  echo "- cut_extension: ${cut_extension}"
+  echo "- no_output: ${no_output}"
+
+  ## check if default file exists ...
+  if [ -f "${default_file}" ] || [ -f "${data_dir}"/defaults/"${default_file}" ]
+  then
+    func_run_pandoc "${md_file}" "${default_file}" "${data_dir}" \
+       "${no_output}" "${cut_extension}"
+  else
+    read -rp "${default_file} does not exist !!!"; exit 1
+  fi
+
+
+}
+
+## -------------------------------------------------------------------------- ##
+func_run_pandoc(){ # md_file="$1"; default_file="$2"; data_dir="$3";
+                   # no_output="$4"; cut_extension="$5"
+  local md_file default_file data_dir no_output cut_extension
+  md_file="$1"; default_file="$2"; data_dir="$3";
+  no_output="$4"; cut_extension="$5"
+
+  ## output file handling
+  local output_file
+  if [ "${cut_extension}" = "false" ]; then
+    output_file="${md_file}.html"
+  else
+    output_file="${md_file//.md*/}.html"
+  fi
+  rm -f "${output_file}"
+
+  ## call pandoc
+  if [ "${no_output}" = "false" ]; then
+    pandoc \
+    --data-dir="${data_dir}" \
+    --defaults="${default_file}" \
+    -f markdown -t html5 "${md_file}" -o "${output_file}"
+  else
+    pandoc \
+    --data-dir="${data_dir}" \
+    --defaults="${default_file}" \
+    -f markdown -t html5 "${md_file}" | func_stdin_to_www
+  fi
+}
+
+## -------------------------------------------------------------------------- ##
+func_get_yaml_block(){ # file="$1"; (ref)YAML_ARRAY="$2"
+  local file_content_array yaml_length i
+
+  readarray -t file_content_array < "$1"
+  yaml_block_border=()
+  for i in "${!file_content_array[@]}"; do
+    [ "---" = "${file_content_array[$i]}" ] \
+      || [ "..." = "${file_content_array[$i]}" ] || continue
+    yaml_block_border+=("$i")
+    [[ ${#yaml_block_border[@]} -eq 2 ]] && break
+  done
+  [[ ${#yaml_block_border[@]} -ne 2 ]] && return 1
+  yaml_start=$((yaml_block_border[0]+1)); yaml_length=$((yaml_block_border[1]-1))
+
+  ## Slice the array (reference to global array)
+  declare -n YAML_ARRAY="$2"
+  # shellcheck disable=SC2034 ## warning: YAML_ARRAY appears unused. Verify use
+  YAML_ARRAY=("${file_content_array[@]:${yaml_start}:${yaml_length}}")
+}
+
+func_get_pattern_from_array(){ # search_pattern="$1"; (ref)yaml_array="$2"
+  local search_pattern yaml_array line pattern
+  search_pattern="$1"
+  declare -n yaml_array="$2"
+  pattern=""
+  for line in "${yaml_array[@]}"; do
+    [ "${line//:*/}" = "${search_pattern}" ] && {
+      pattern="${line//*:/}"; pattern="${pattern//[[:space:]]/}"
+      break
+    }
+  done
+  echo "${pattern}"
+}
+
+## -------------------------------------------------------------------------- ##
+## read from stdin, write to a temp file, open the temp file in a browser
+## finally delete the temp file
+func_stdin_to_www(){
+  local tmpfile
+  #tmpfile=$(mktemp -q)
+  tmpfile="./temp.html"
+  cat > "${tmpfile}"
+  x-www-browser -new-instance "${tmpfile}" && rm -f "${tmpfile}"
+}
+
+## ########################################################################## ##

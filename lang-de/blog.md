@@ -3,6 +3,7 @@ defaults: website
 title: blog [matrixxx]
 toc: false
 lang: de
+cut-extension: true
 ---
 <!-- *********************************************************************** -->
 

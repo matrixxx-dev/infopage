@@ -3,6 +3,7 @@ defaults: website
 title: Impressum [matrixxx]
 toc: false
 lang: de
+cut-extension: true
 ---
 <!-- *********************************************************************** -->
 

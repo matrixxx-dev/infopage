@@ -3,6 +3,7 @@ defaults: website_en
 title: Introduction [matrixxx]
 toc: false
 lang: en
+cut-extension: true
 ---
 <!-- *********************************************************************** -->
 

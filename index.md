@@ -3,6 +3,7 @@ defaults: website-index
 title: Startpage [matrixxx]
 toc: false
 lang: de
+cut-extension: true
 ---
 <!-- *********************************************************************** -->
 

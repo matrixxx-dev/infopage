@@ -3,6 +3,7 @@ defaults: website
 title: Datenschutz [matrixxx]
 toc: false
 lang: de
+cut-extension: true
 ---
 <!-- *********************************************************************** -->
 

@@ -15,22 +15,29 @@ $endfor$
 <body>
 <header>
   <div class="mitte">
-    <a href="../index_en.html" title="Start page">
-      <img src="../images/logo.avif" alt="[matrixxx]" width="100" />
+    <a href="index_en.html" title="Start page">
+      <img src="images/logo.avif" alt="[matrixxx]" width="100" />
     </a>
     <text>a D.I.Y Live System</text>
   </div>
   <ul class="mitte">
-    <li><a href="../index_en.html">Start page</a></li>
-    <li><a href="./blog.html">Blog</a></li>
-    <li><a href="./introduction.html">System description</a></li>
-    <li><a href="./download.html">Download</a></li>
+    <li><a href="index_en.html">Start page</a></li>
+    <li><a href="lang-en/blog.html">Blog</a></li>
+    <li><a href="lang-en/introduction.html">System description</a></li>
+    <li><a href="lang-en/download.html">Download</a></li>
+    <li><a href="index_en.html"><img src="svg/flag-gb.svg" alt="english" width="30"></a></li>
+    <li><a href="index.html"><img src="svg/flag-de.svg" alt="german" width="30"></a></li>
   </ul>
 </header>
+<div class="teaser">
+  <picture>
+    <source srcset="images/image.avif" type="image/AVIF">
+    <img src="images/image.jpg" alt="[matrixxx]">
+  </picture>
+</div>
 $for(include-before)$
 $include-before$
 $endfor$
-
 $if(toc)$
 <nav id="$idprefix$TOC" role="doc-toc">
 $if(toc-title)$
@@ -40,14 +47,13 @@ $table-of-contents$
 </nav>
 $endif$
 $body$
-
 $for(include-after)$
 $include-after$
 $endfor$
 <footer>
   <ul class="mitte">
-    <li><a href="./impressum.html">Imprint</a></li>
-    <li><a href="./datenschutz.html">Privacy</a></li>
+    <li><a href="lang-en/impressum.html">Imprint</a></li>
+    <li><a href="lang-en/datenschutz.html">Privacy</a></li>
   </ul>
   <h6 class="mitte">©matrixxx.dev [info@matrixxx.dev]</h6>
 </footer>

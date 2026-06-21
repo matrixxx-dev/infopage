@@ -3,9 +3,9 @@ toc: true
 toc-depth: 3
 
 ## HTML5
-template: default-website_en.html5
+template: website_en.html5
 css: ../css/styles.css
-resource-path: ['.', '${USERDATA}/style-website']
+resource-path: ['.', '${USERDATA}/resources/website']
 include-in-header:
 - header
 include-before-body: main_start
@@ -14,5 +14,3 @@ include-after-body: main_end
 strip-comments: true
 html-q-tags: true                           ## <q> for quotes in HTML (Zitate)
 verbosity: INFO
-#log-file: website.log
-
