@@ -1,6 +1,5 @@
 ---
 defaults: github-markdown
-toc: false
 ---
 <!-- *********************************************************************** -->
 # matrixxx infopage
