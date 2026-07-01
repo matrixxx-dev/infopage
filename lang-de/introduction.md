@@ -8,9 +8,6 @@ cut-extension: true
 <!-- *********************************************************************** -->
 
 ********************************************************************************
-<!-- ![](../svg/todo.svg){ alt="[matrixxx] TODO" width="100" } -->
-<img src="../svg/todo.svg" alt="[matrixxx] TODO" width="100" />
-
 # Systembeschreibung des Matrixxx-Projekt (eine Einführung)
 - Ein Linux Live-System zum Selberbauen - basierend auf Shell-Skripten.
 - In erster Linie für die Nutzung auf USB-Sticks (oder Ähnlichem).
