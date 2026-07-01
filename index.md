@@ -40,7 +40,8 @@ Skript-Repositories verfügbar.
 Für die Einrichtung des Basissystems empfehle ich folgende Schritte:
 
 - Besorgen Sie sich einen USB-Stick mit einer Kapazität von mindestens 32 GB
-  (so haben Sie ausreichend Platz zum Experimentieren).
+  (so haben Sie ausreichend Platz zum Experimentieren). **Hinweis:**
+  Das reine Basissystem hat lediglich eine Gesamtgröße von 3,7 GB
 - Lesen Sie die [Anleitung](https://github.com/matrixxx-dev/matrixxx-boot-device-content/blob/main/readme-HowTo.md)
   und befolgen Sie die dortigen Anweisungen.
   - Dieses Dokument enthält Anleitungen sowohl auf Englisch als auch auf Deutsch.

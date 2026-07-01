@@ -38,7 +38,8 @@ the script repositories.
 I recommend the following steps to set up the base system:
 
 - Obtain a USB flash drive with a capacity of at least 32 GB
-  (this ensures you have enough space to experiment).
+  (this ensures you have enough space to experiment). **Note:**
+  The pure basic system only has a total size of 3.7 GB
 - Read the
   [guide](https://github.com/matrixxx-dev/matrixxx-boot-device-content/blob/main/readme-HowTo.md)
   and follow the instructions provided there.
