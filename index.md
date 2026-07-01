@@ -31,3 +31,28 @@ nutzbar und bedienbar ist.
 - [Download](lang-de/download.html)
 
 ********************************************************************************
+## Das Basissystem
+Um den Einstieg zu erleichtern, stelle ich in den zugehörigen Repositories ein
+vorkonfiguriertes Basissystem bereit.
+Gebrauchsfertige Systemkomponenten sind im „Releases“-Bereich der
+Skript-Repositories verfügbar.
+
+Für die Einrichtung des Basissystems empfehle ich folgende Schritte:
+
+- Besorgen Sie sich einen USB-Stick mit einer Kapazität von mindestens 32 GB
+  (so haben Sie ausreichend Platz zum Experimentieren).
+- Lesen Sie die [Anleitung](https://github.com/matrixxx-dev/matrixxx-boot-device-content/blob/main/readme-HowTo.md)
+  und befolgen Sie die dortigen Anweisungen.
+  - Dieses Dokument enthält Anleitungen sowohl auf Englisch als auch auf Deutsch.
+  - Über die Links in der Tabelle können Sie die Systemkomponenten direkt
+  herunterladen.
+
+Sobald das Basissystem gestartet ist, ermöglicht die darin enthaltene Software
+die Nutzung der Skriptsammlung ohne weitere Anpassungen.
+Alle von Ihnen erstellten Systemkomponenten können anschließend wieder in
+das Basissystem integriert werden und Sie haben Ihr eigenes System.
+
+Viel Spaß beim Ausprobieren!
+
+
+********************************************************************************

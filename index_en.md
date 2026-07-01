@@ -29,3 +29,25 @@ on a wide variety of x86 hardware.
 - [Download](lang-en/download.html)
 
 ********************************************************************************
+## The basic system
+To make getting started easier, I provide a pre-configured base system in the
+associated repositories.
+Ready-to-use system components are available in the "Releases" section of
+the script repositories.
+
+I recommend the following steps to set up the base system:
+
+- Obtain a USB flash drive with a capacity of at least 32 GB
+  (this ensures you have enough space to experiment).
+- Read the
+  [guide](https://github.com/matrixxx-dev/matrixxx-boot-device-content/blob/main/readme-HowTo.md)
+  and follow the instructions provided there.
+- This document contains instructions in both English and German.
+- You can download the system components directly via the links in the table.
+
+Once the basic system is started, the software included on it allows you to
+use the script collection without any further adjustments.
+Any system components you create can then be integrated back into the base
+system and you have your own system.
+
+Have fun trying it out!
