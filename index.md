@@ -1,6 +1,6 @@
 ---
 defaults: website-index
-title: Startpage [matrixxx]
+title: matrixxx - ein Linux Live System
 toc: false
 lang: de
 cut-extension: true
@@ -16,7 +16,7 @@ Allgemeinheit zur Verfügung stellen).
 
 Hiermit lassen sich:
 
-- ein für diese Zwecke angepasster moderner Kernel erzeugen
+- ein für diese Zwecke angepassten modernen Kernel erzeugen
 - ein einfaches von USB Flash Laufwerken startbares Boot System aufbauen
 - und ein auf Debian basierendes modulares Betriebssystem zusammenstellen
 

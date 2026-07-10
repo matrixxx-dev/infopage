@@ -1,6 +1,6 @@
 ---
 defaults: website-index_en
-title: start page [matrixxx]
+title: matrixxx - a Linux Live System
 toc: false
 lang: en
 cut-extension: true
