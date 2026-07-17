@@ -56,6 +56,7 @@ system and you have your own system.
 - the **/etc/inittab** used follows **busybox** conventions and starts the
   necessary configuration scripts
 - the graphical user interface is based on the **X Window System**
-- low system resource requirements is and remains a goal
+- low system resource requirements is and remains a goal,
+  as well as good performance (e.g., startup speed)
 
 Have fun trying it out!

@@ -58,7 +58,8 @@ das Basissystem integriert werden und Sie haben Ihr eigenes System.
 - die verwendete **/etc/inittab** folgt den **busybox**-Konventionen und
   startet die notwendigen Konfigurationsskripte
 - die grafische Benutzeroberfläche basiert auf dem **X Window System**
-- wenig Systemresourcen zu benötigen ist und bleibt ein Ziel
+- wenig Systemresourcen zu benötigen ist und bleibt ein Ziel,
+  ebenso wie eine gute Leistung (z.B. Startgeschwindigkeit)
 
 Viel Spaß beim Ausprobieren!
 
