@@ -53,6 +53,13 @@ die Nutzung der Skriptsammlung ohne weitere Anpassungen.
 Alle von Ihnen erstellten Systemkomponenten können anschließend wieder in
 das Basissystem integriert werden und Sie haben Ihr eigenes System.
 
+#### Konfigurationshinweise (matrixxx-remaster)
+- das System ist so konzipiert, dass es **ohne systemd** funktioniert
+- die verwendete **/etc/inittab** folgt den **busybox**-Konventionen und
+  startet die notwendigen Konfigurationsskripte
+- die grafische Benutzeroberfläche basiert auf dem **X Window System**
+- wenig Systemresourcen zu benötigen ist und bleibt ein Ziel
+
 Viel Spaß beim Ausprobieren!
 
 

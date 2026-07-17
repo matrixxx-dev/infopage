@@ -51,4 +51,11 @@ use the script collection without any further adjustments.
 Any system components you create can then be integrated back into the base
 system and you have your own system.
 
+#### Configuration Notes (matrixxx-remaster)
+- the system is designed to function **without systemd**
+- the **/etc/inittab** used follows **busybox** conventions and starts the
+  necessary configuration scripts
+- the graphical user interface is based on the **X Window System**
+- low system resource requirements is and remains a goal
+
 Have fun trying it out!
